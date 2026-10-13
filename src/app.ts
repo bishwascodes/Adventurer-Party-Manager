@@ -79,20 +79,19 @@ searchList.map((item) => {
 
 console.log("=== BATTLE ===");
 console.log(`Thorin has current health: ${getHealth("Thorin", party)}`);
-
-if (party[0] != undefined) {
-    takeDamage(party[0], 30)
+const thorin = findAdventurer("Thorin", party);
+if (thorin != undefined) {
+    takeDamage(thorin, 30)
     console.log("Thorin took 30 damage.")
     console.log(`Thorin has ${getHealth("Thorin", party)} health remaining.`);
-    console.log(party[0]?.isActive ? "Thorin is Still Alive" : "Thorin has been defeated");
-}
+    console.log(thorin.isActive ? "Thorin is Still Alive" : "Thorin has been defeated");
 
 
-if (party[0] != undefined) {
-    takeDamage(party[0], 100)
+
+    takeDamage(thorin, 100)
     console.log("Thorin took 100 damage.")
     console.log(`Thorin has ${getHealth("Thorin", party)} health remaining.`);
-    console.log(party[0]?.isActive ? "Thorin is Still Alive" : "Thorin has been defeated");
+    console.log(thorin.isActive ? "Thorin is Still Alive" : "Thorin has been defeated");
 }
 
 
