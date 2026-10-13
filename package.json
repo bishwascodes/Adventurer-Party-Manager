@@ -1,0 +1,9 @@
+{
+    "name": "adventurer-party-manager",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/app.js"
+    }
+}
